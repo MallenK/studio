@@ -3,7 +3,7 @@
     {
       "id": "profile",
       "description": "Developer's profile picture",
-      "imageUrl": "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9maWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMzU2NTYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/FotoPerfil-sinBG.png",
       "imageHint": "profile portrait"
     },
     {
@@ -13,34 +13,10 @@
       "imageHint": "restaurant interior"
     },
     {
-      "id": "project-1",
-      "description": "Generic project 1 showcase",
-      "imageUrl": "https://images.unsplash.com/photo-1626908013351-800ddd734b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVjaCUyMGFic3RyYWN0fGVufDB8fHx8MTc2MzM0NDM1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "tech abstract"
-    },
-    {
-      "id": "project-2",
-      "description": "Generic project 2 showcase",
-      "imageUrl": "https://images.unsplash.com/photo-1608742213509-815b97c30b36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwc2NyZWVufGVufDB8fHx8MTc2MzM0MzQ1NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "code screen"
-    },
-    {
-      "id": "github-1",
-      "description": "GitHub repo 1 preview",
-      "imageUrl": "https://images.unsplash.com/photo-1684158100445-8e6926faf964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGxpbmVzfGVufDB8fHx8MTc2MzM1NDQxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract lines"
-    },
-    {
-      "id": "github-2",
-      "description": "GitHub repo 2 preview",
-      "imageUrl": "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMHNoYXBlc3xlbnwwfHx8fDE3NjMzNjczMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract shapes"
-    },
-    {
-      "id": "github-3",
-      "description": "GitHub repo 3 preview",
-      "imageUrl": "https://images.unsplash.com/photo-1664526936810-ec0856d31b92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXR3b3JrJTIwbm9kZXN8ZW58MHx8fHwxNzYzMzU2Njk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "network nodes"
+      "id": "peluqueria",
+      "description": "Aura Hair Salon project showcase",
+      "imageUrl": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "hair salon"
     },
     {
       "id": "hero-bg-1",

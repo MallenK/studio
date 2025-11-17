@@ -6,6 +6,7 @@ import { Section } from '../section';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '../ui/button';
 import { Download } from 'lucide-react';
+import Link from 'next/link';
 
 const AboutSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,6 +58,11 @@ const AboutSection = () => {
     return () => ctx.revert();
   }, []);
 
+  const scrollTo = (target: string) => {
+    if (typeof window.gsap === 'undefined') return;
+    window.gsap.to(window, { duration: 1, scrollTo: target });
+  };
+
   return (
     <Section id="about" ref={containerRef}>
       <div className="grid md:grid-cols-5 gap-12 items-center">
@@ -66,16 +72,26 @@ const AboutSection = () => {
           </h2>
           <div className="space-y-4 text-lg text-foreground/80">
             <p className="about-text">
-              I'm a passionate Full-Stack Web Developer with a knack for creating dynamic, user-friendly, and visually appealing web experiences. My journey in tech is driven by a love for problem-solving and a desire to build things that make a difference.
+              I'm Sergi Mallén, a full-stack web developer. I build fast, clear, and easy-to-maintain websites. I'm comfortable with HTML, CSS, and JavaScript, and I work on the backend with PHP and MySQL when the project requires it.
             </p>
             <p className="about-text">
-              With experience in both frontend and backend technologies, I enjoy bringing ideas to life, from the initial concept in Figma to a fully deployed application. I thrive in collaborative environments and I'm always eager to learn and adapt to new technologies.
+              I enjoy turning ideas into products: I define the scope, create mockups, develop, and deploy with CI/CD. I'm obsessed with two things: real performance (Core Web Vitals) and a UX that explains itself without friction.
+            </p>
+             <p className="about-text">
+              I have created my own projects such as a GeoGuessr-style game for Spain, an investment tracker, and a recipe app. As a freelancer, I help local businesses launch or improve their websites with measurable results.
             </p>
           </div>
-          <Button variant="outline" className="about-button">
-            <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </Button>
+          <div className="flex gap-4 about-button">
+            <Button onClick={() => scrollTo('#projects')}>
+              View Projects
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/CV-Sergi-Mallen.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </Link>
+            </Button>
+          </div>
         </div>
         <div className="md:col-span-2 flex justify-center md:justify-end">
           {profileImage && (

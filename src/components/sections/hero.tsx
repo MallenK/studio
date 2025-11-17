@@ -85,21 +85,23 @@ const HeroSection = () => {
       <div className="z-10 container px-4 md:px-6">
         <AnimatedText
           ref={titleRef}
-          text="Full-Stack Developer"
+          text="Sergi Mallén Lopez"
           el="h1"
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4"
         />
         <AnimatedText
           ref={subtitleRef}
-          text="Crafting Digital Experiences with Code and Creativity."
+          text="Full-Stack developer focused on performance, accessibility, and long-term maintenance. Clear, secure, and scalable sites and APIs."
           el="p"
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
         />
         
-        <div className="mt-8 hero-button">
+        <div className="mt-8 hero-button space-x-4">
           <Button size="lg" onClick={() => scrollTo('#projects')}>
             View My Work
-            <ArrowDown className="ml-2 h-5 w-5" />
+          </Button>
+           <Button size="lg" variant="outline" onClick={() => scrollTo('#contact')}>
+            Request a quote
           </Button>
         </div>
       </div>

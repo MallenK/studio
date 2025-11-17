@@ -45,7 +45,7 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); scrollTo(0)}}>
             <Code className="h-8 w-8 text-primary" />
-            <span className="font-headline text-xl font-bold">PortfolioMotion</span>
+            <span className="font-headline text-xl font-bold">Sergi Mallén</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (

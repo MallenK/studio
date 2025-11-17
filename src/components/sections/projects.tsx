@@ -69,7 +69,7 @@ const ProjectsSection = () => {
     <Section id="projects" ref={containerRef}>
       <div className="text-center mb-12">
         <h2 className="project-title font-headline text-4xl md:text-5xl font-bold text-primary">
-          Featured Projects
+          Projects
         </h2>
       </div>
 
@@ -111,10 +111,7 @@ const FeaturedProjectCard = ({ project }: { project: (typeof projects)[0] }) => 
                 <p className="text-muted-foreground text-lg">{project.description}</p>
                 <div className="flex gap-4 pt-4">
                     <Button asChild>
-                        <Link href={project.liveUrl} target="_blank">Live Site <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
-                    <Button variant="outline" asChild>
-                        <Link href={project.githubUrl} target="_blank">View Code</Link>
+                        <Link href={project.liveUrl} target="_blank">Visit <ArrowUpRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                 </div>
             </div>
@@ -148,10 +145,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
                     <p className="text-muted-foreground">{project.description}</p>
                     <div className="flex gap-4 pt-2">
                         <Button variant="link" asChild className="p-0 h-auto">
-                            <Link href={project.liveUrl} target="_blank">Live Site <ArrowUpRight className="ml-1 h-4 w-4" /></Link>
-                        </Button>
-                        <Button variant="link" asChild className="p-0 h-auto">
-                            <Link href={project.githubUrl} target="_blank">View Code</Link>
+                            <Link href={project.liveUrl} target="_blank">View Demo <ArrowUpRight className="ml-1 h-4 w-4" /></Link>
                         </Button>
                     </div>
                 </div>

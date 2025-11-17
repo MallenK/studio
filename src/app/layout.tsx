@@ -4,7 +4,7 @@ import { GsapProvider } from '@/lib/gsap-provider';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'PortfolioMotion | Professional Developer Portfolio',
+  title: 'Sergi Mallén López | Web Developer / Full-Stack',
   description: 'An interactive and creative portfolio for a professional web developer.',
 };
 
