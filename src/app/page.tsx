@@ -1,3 +1,27 @@
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import HeroSection from "@/components/sections/hero";
+import AboutSection from "@/components/sections/about";
+import SkillsSection from "@/components/sections/skills";
+import ProjectsSection from "@/components/sections/projects";
+import GithubSection from "@/components/sections/github";
+import ContactSection from "@/components/sections/contact";
+
 export default function Home() {
-  return <></>;
+  return (
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <Header />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <GithubSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
 }
