@@ -8,13 +8,19 @@ export const metadata: Metadata = {
   description: 'An interactive and creative portfolio for a professional web developer.',
 };
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }, { lang: 'ca' }]
+}
+
 export default function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: { lang: string };
+}) {
   return (
-    <html lang="en" className="dark">
+    <html lang={params.lang} className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

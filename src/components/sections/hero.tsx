@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 import { ArrowDown } from 'lucide-react';
 import { AnimatedText } from '../animated-text';
 
-const HeroSection = () => {
+const HeroSection = ({ dictionary }: { dictionary: any }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -85,23 +85,23 @@ const HeroSection = () => {
       <div className="z-10 container px-4 md:px-6">
         <AnimatedText
           ref={titleRef}
-          text="Sergi Mallén Lopez"
+          text={dictionary.title}
           el="h1"
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4"
         />
         <AnimatedText
           ref={subtitleRef}
-          text="Full-Stack developer focused on performance, accessibility, and long-term maintenance. Clear, secure, and scalable sites and APIs."
+          text={dictionary.subtitle}
           el="p"
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
         />
         
         <div className="mt-8 hero-button space-x-4">
           <Button size="lg" onClick={() => scrollTo('#projects')}>
-            View My Work
+            {dictionary.cta.viewWork}
           </Button>
            <Button size="lg" variant="outline" onClick={() => scrollTo('#contact')}>
-            Request a quote
+            {dictionary.cta.requestQuote}
           </Button>
         </div>
       </div>

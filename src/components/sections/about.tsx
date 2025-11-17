@@ -8,7 +8,7 @@ import { Button } from '../ui/button';
 import { Download } from 'lucide-react';
 import Link from 'next/link';
 
-const AboutSection = () => {
+const AboutSection = ({ dictionary }: { dictionary: any }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const profileImage = PlaceHolderImages.find((img) => img.id === 'profile');
 
@@ -68,27 +68,21 @@ const AboutSection = () => {
       <div className="grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-3 space-y-6">
           <h2 className="about-title font-headline text-4xl md:text-5xl font-bold text-primary">
-            About Me
+            {dictionary.title}
           </h2>
           <div className="space-y-4 text-lg text-foreground/80">
-            <p className="about-text">
-              I'm Sergi Mallén, a full-stack web developer. I build fast, clear, and easy-to-maintain websites. I'm comfortable with HTML, CSS, and JavaScript, and I work on the backend with PHP and MySQL when the project requires it.
-            </p>
-            <p className="about-text">
-              I enjoy turning ideas into products: I define the scope, create mockups, develop, and deploy with CI/CD. I'm obsessed with two things: real performance (Core Web Vitals) and a UX that explains itself without friction.
-            </p>
-             <p className="about-text">
-              I have created my own projects such as a GeoGuessr-style game for Spain, an investment tracker, and a recipe app. As a freelancer, I help local businesses launch or improve their websites with measurable results.
-            </p>
+            {dictionary.paragraphs.map((p: string, i: number) => (
+              <p key={i} className="about-text">{p}</p>
+            ))}
           </div>
           <div className="flex gap-4 about-button">
             <Button onClick={() => scrollTo('#projects')}>
-              View Projects
+              {dictionary.viewProjects}
             </Button>
             <Button variant="outline" asChild>
               <Link href="/CV-Sergi-Mallen.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
-                Download CV
+                {dictionary.downloadCV}
               </Link>
             </Button>
           </div>

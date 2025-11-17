@@ -5,7 +5,7 @@ import { Section } from '../section';
 import { skills } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
-const SkillsSection = () => {
+const SkillsSection = ({ dictionary }: { dictionary: any }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -49,16 +49,16 @@ const SkillsSection = () => {
     <Section id="skills" className="bg-background" ref={containerRef}>
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
-          Technical Skills
+          {dictionary.title}
         </h2>
         <p className="text-lg text-muted-foreground mt-4">
-          My toolbox for building modern web applications.
+          {dictionary.subtitle}
         </p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <Card className="skill-category-card">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl text-primary">Frontend</CardTitle>
+            <CardTitle className="font-headline text-2xl text-primary">{dictionary.frontend}</CardTitle>
           </CardHeader>
           <CardContent className="grid grid-cols-2 gap-4">
             {skills.frontend.map((skill) => (
@@ -71,7 +71,7 @@ const SkillsSection = () => {
         </Card>
         <Card className="skill-category-card">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl text-primary">Backend</CardTitle>
+            <CardTitle className="font-headline text-2xl text-primary">{dictionary.backend}</CardTitle>
           </CardHeader>
           <CardContent className="grid grid-cols-2 gap-4">
             {skills.backend.map((skill) => (
@@ -84,7 +84,7 @@ const SkillsSection = () => {
         </Card>
         <Card className="skill-category-card">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl text-primary">Tools</CardTitle>
+            <CardTitle className="font-headline text-2xl text-primary">{dictionary.tools}</CardTitle>
           </CardHeader>
           <CardContent className="grid grid-cols-2 gap-4">
             {skills.tools.map((skill) => (

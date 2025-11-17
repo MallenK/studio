@@ -1,0 +1,68 @@
+{
+    "header": {
+        "navLinks": [
+            { "name": "Sobre mí", "href": "#about" },
+            { "name": "Skills", "href": "#skills" },
+            { "name": "Proyectos", "href": "#projects" },
+            { "name": "Contacto", "href": "#contact" }
+        ],
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Sergi Mallén Lopez",
+        "subtitle": "Desarrollador Full-Stack centrado en rendimiento, accesibilidad y mantenimiento a largo plazo. Sitios y APIs claros, seguros y escalables.",
+        "cta": {
+            "viewWork": "Ver mis trabajos",
+            "requestQuote": "Pedir presupuesto"
+        }
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "paragraphs": [
+            "Soy Sergi Mallén, desarrollador web full-stack. Construyo sitios rápidos, claros y fáciles de mantener. Me muevo cómodo en HTML, CSS y JavaScript, y trabajo backend con PHP y MySQL cuando el proyecto lo pide.",
+            "Disfruto convirtiendo ideas en productos: defino el alcance, maqueto, desarrollo y despliego con CI/CD. Me obsesionan dos cosas: rendimiento real (Core Web Vitals) y una UX que explique sin fricción.",
+            "He creado proyectos propios como un juego tipo GeoGuessr por España, un tracker de inversiones y una app de recetas. En freelance, ayudo a negocios locales a lanzar o mejorar su web con resultados medibles."
+        ],
+        "viewProjects": "Ver Proyectos",
+        "downloadCV": "Descargar CV"
+    },
+    "skills": {
+        "title": "Habilidades Técnicas",
+        "subtitle": "Mis herramientas para construir aplicaciones web modernas.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Herramientas"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "projects": [
+            {
+              "title": "Ateneu Unió Restaurant",
+              "description": "Web corporativa del restaurante. Contenidos claros, diseño accesible y enfoque local.",
+              "tags": ["Symfony", "React", "UX/UI", "Accesibilidad"],
+              "liveUrl": "https://ateneuuniorestaurant.com",
+              "imageId": "ateneu"
+            },
+            {
+              "title": "Peluquería Aura — Demo",
+              "description": "Demo ligera para negocio local. Estructura escalable y rápida en GitHub Pages.",
+              "tags": ["HTML", "CSS", "JavaScript"],
+              "liveUrl": "https://mallenk.github.io/PeluqueriaAura/",
+              "imageId": "peluqueria"
+            }
+        ],
+        "card": {
+            "visit": "Visitar"
+        }
+    },
+    "contact": {
+        "title": "Construyamos Juntos",
+        "subtitle": "¿Tienes un proyecto en mente o simplemente quieres saludar? Escríbeme.",
+        "form": {
+            "name": "Tu Nombre",
+            "email": "Tu Email",
+            "message": "Tu Mensaje",
+            "submit": "Enviar Mensaje"
+        }
+    }
+}

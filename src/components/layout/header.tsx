@@ -1,14 +1,25 @@
 'use client';
 
-import { navLinks } from '@/lib/data';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Code } from 'lucide-react';
+import { Code, Globe } from 'lucide-react';
 import { useLayoutEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { usePathname } from 'next/navigation';
 
-const Header = () => {
+const Header = ({ dictionary }: { dictionary: any }) => {
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+
+  const getCurrentLang = () => {
+    return pathname.split('/')[1] || 'en';
+  }
 
   useLayoutEffect(() => {
     if (typeof window.gsap === 'undefined') return;
@@ -43,12 +54,12 @@ const Header = () => {
       )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); scrollTo(0)}}>
+          <Link href={`/${getCurrentLang()}`} className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); scrollTo(0)}}>
             <Code className="h-8 w-8 text-primary" />
             <span className="font-headline text-xl font-bold">Sergi Mallén</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
+            {dictionary.navLinks.map((link:any) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -62,9 +73,30 @@ const Header = () => {
               </a>
             ))}
           </nav>
-          <Button onClick={() => scrollTo('#contact')}>
-            Contact
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button onClick={() => scrollTo('#contact')}>
+              {dictionary.contact}
+            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Globe className="h-5 w-5" />
+                  <span className="sr-only">Change language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href="/en">English</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/es">Español</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/ca">Català</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </div>
     </header>
