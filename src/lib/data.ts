@@ -40,7 +40,7 @@ export const projects = [
     description: 'A website focused on accessible design, clear content, and a local focus for a restaurant. This project highlights skills in user-centric UX and corporate web development.',
     tags: ['Symfony', 'React', 'UX/UI', 'Accessibility'],
     liveUrl: 'https://ateneuuniorestaurant.com',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mallenK',
     imageId: 'ateneu',
     featured: true,
   },
@@ -49,7 +49,7 @@ export const projects = [
     description: 'A full-stack e-commerce site with features like product catalog, shopping cart, user authentication, and an admin dashboard for managing products and orders.',
     tags: ['Node.js', 'React', 'MySQL', 'API REST'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mallenK',
     imageId: 'project-1',
   },
   {
@@ -57,7 +57,7 @@ export const projects = [
     description: 'A responsive web application for managing tasks and projects. Users can create, update, and track their tasks in a collaborative environment.',
     tags: ['React', 'Figma', 'JavaScript'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/mallenK',
     imageId: 'project-2',
   },
 ];
@@ -66,7 +66,7 @@ export const githubRepos = [
   {
     title: 'dotfiles',
     description: 'My personal configuration files for various tools and shells. A look into my development environment setup.',
-    url: '#',
+    url: 'https://github.com/mallenK/dotfiles',
     imageId: 'github-1',
   },
   {
@@ -78,7 +78,7 @@ export const githubRepos = [
   {
     title: 'api-boilerplate',
     description: 'A boilerplate for quickly setting up a RESTful API using Node.js, Express, and MySQL with best practices.',
-    url: '#',
+    url: 'https://github.com/mallenK/api-boilerplate',
     imageId: 'github-3',
   },
 ];

@@ -13,7 +13,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" aria-label="GitHub">
+              <Link href="https://github.com/mallenK" target="_blank" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </Link>
             </Button>

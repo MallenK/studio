@@ -94,7 +94,7 @@ const GithubSection = () => {
       </div>
       <div className="text-center mt-12">
         <Button asChild size="lg" variant="outline">
-          <Link href="https://github.com" target="_blank">
+          <Link href="https://github.com/mallenK" target="_blank">
             <Github className="mr-2 h-5 w-5" />
             View all on GitHub
           </Link>
